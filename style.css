@@ -114,7 +114,7 @@ p {
     font-size: 1.4em;
   }
   .bannierre {
-    width: 90%;
+    width: 80%;
     margin: auto;
     display: block;
   }
@@ -131,4 +131,7 @@ p {
     display: block;
     width: 90%;
   }
+  .icon {
+    width: 80%;
+  }.divicon{width: 80%;}
 }
