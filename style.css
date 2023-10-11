@@ -95,14 +95,58 @@ h3 {
   text-transform: uppercase;
 }
 p {
-  padding-right: 50px;
+  padding-right: 120px;
 }
 .entete {
-  margin-left: 100px;
+  margin-left: 400px;
 }
 .profil {
   margin-left: 200px;
 }
+@media screen and (max-width: 500px) {
+  body section {
+    display: block;
+    /* border: black solid 1px; */
+  }
+
+  body section article {
+    width: 90%;
+    font-size: 1.4em;
+  }
+  .bannierre {
+    width: 80%;
+    margin: auto;
+    display: block;
+    margin-left: -10px;
+  }
+  div {
+    display: block;
+  }
+  .entete {
+    margin-left: 1rem;
+  }
+  .profil {
+    margin-left: -150px;
+  }
+  ul {
+    display: block;
+    width: 90%;
+  }
+  .icon {
+    width: 80%;
+    margin-left: 70px;
+  }
+  .divicon {
+    width: 50%;
+  }
+  .divicon img {
+    margin-left: -110px;
+  }
+  .les4 {
+    height: fit-content;
+  }
+}
+
 @media screen and (max-width: 900px) {
   body section {
     display: block;
@@ -117,6 +161,7 @@ p {
     width: 80%;
     margin: auto;
     display: block;
+    margin-left: -10px;
   }
   div {
     display: block;
@@ -125,13 +170,28 @@ p {
     margin-left: 1rem;
   }
   .profil {
-    margin-left: 0px;
+    margin-left: -150px;
   }
   ul {
     display: block;
     width: 90%;
   }
+  ul li a {list-style-type: none;
+    text-decoration: none;
+    color: #e3b7a6;
+    font-size: 1.3em;
+  }
   .icon {
     width: 80%;
-  }.divicon{width: 80%;}
+    margin-left: 70px;
+  }
+  .divicon {
+    width: 50%;
+  }
+  .divicon img {
+    margin-left: 100px;
+  }
+  .regrouper {
+    margin: 0px 100px;
+  }
 }
