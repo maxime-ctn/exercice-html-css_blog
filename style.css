@@ -1,29 +1,33 @@
-body {
+* {
   margin: 0;
   padding: 0;
+}
+body {
   background: rgba(128, 128, 128, 0.562);
 }
-ul {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+nav {
   background: black;
-  height: fit-content;
 }
-ul li a {
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: fit-content;
+  list-style-type: none;
+  padding-inline-start: 20px;
+}
+nav ul li a {
   text-decoration: none;
   color: #e3b7a6;
   font-size: 1.3em;
-}
-ul li a:hover {
-  text-decoration: none;
-  list-style-type: none;
-  color: #e3b7a6;
   padding: 5px;
 }
+nav ul li a:hover {
+  color: white;
+}
 .logo {
-  width: 10%;
-  margin-left: 200px;
+  width: 4vw;
+  margin-left: 2px;
 }
 .loupe {
   width: 5%;
@@ -33,19 +37,15 @@ section {
   flex-direction: row;
   align-items: center;
   width: 90%;
-  margin: 1rem 3rem;
   justify-content: center;
 }
 
 /* Style des articles */
 article {
-  z-index: 100;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: stretch;
   width: fit-content;
-  border-radius: 20px;
   padding: 10px;
 }
 /* Style de la colonne latérale */
@@ -64,6 +64,9 @@ div img {
   height: 150px;
   margin: 2px;
 }
+.regrouper {
+  margin-top: 100px;
+}
 .lapin {
   margin-top: 40px;
 }
@@ -78,11 +81,8 @@ div img {
 }
 .divicon p {
   width: fit-content;
-  margin: auto;
 }
-.divicon img {
-  margin: 0px 150px;
-}
+
 button {
   width: fit-content;
   padding: 5px 10px;
@@ -94,13 +94,10 @@ h1 {
 h3 {
   text-transform: uppercase;
 }
-p {
-  padding-right: 120px;
+section article p {
+  padding-right: 60px;
 }
 .entete {
-  margin-left: 400px;
-}
-.profil {
   margin-left: 200px;
 }
 @media screen and (max-width: 500px) {
@@ -108,25 +105,29 @@ p {
     display: block;
     /* border: black solid 1px; */
   }
-
+  nav ul li a {
+    font-size: 1.2em;
+  }
   body section article {
     width: 90%;
     font-size: 1.4em;
   }
+  .sectionlesquatres {
+    margin: 0px;
+  }
+  .sectionicon {
+    margin-left: -20px;
+  }
   .bannierre {
-    width: 80%;
     margin: auto;
-    display: block;
-    margin-left: -10px;
+    flex-direction: column;
   }
   div {
     display: block;
   }
-  .entete {
-    margin-left: 1rem;
-  }
-  .profil {
-    margin-left: -150px;
+
+  .lapin {
+    margin: 0px;
   }
   ul {
     display: block;
@@ -134,34 +135,31 @@ p {
   }
   .icon {
     width: 80%;
-    margin-left: 70px;
+    margin-left: -500px;
   }
   .divicon {
     width: 50%;
   }
-  .divicon img {
-    margin-left: -110px;
-  }
+
   .les4 {
     height: fit-content;
   }
 }
 
 @media screen and (max-width: 900px) {
-  body section {
-    display: block;
-    /* border: black solid 1px; */
-  }
-
   body section article {
     width: 90%;
     font-size: 1.4em;
   }
+  .logo {
+    width: 4vw;
+    margin-left: 0px;
+  }
   .bannierre {
-    width: 80%;
-    margin: auto;
-    display: block;
-    margin-left: -10px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   div {
     display: block;
@@ -169,17 +167,18 @@ p {
   .entete {
     margin-left: 1rem;
   }
-  .profil {
-    margin-left: -150px;
-  }
-  ul {
+  nav ul {
     display: block;
     width: 90%;
+    justify-content: center;
   }
-  ul li a {list-style-type: none;
+  nav ul li a {
+    list-style-type: none;
     text-decoration: none;
     color: #e3b7a6;
+    text-align: center;
     font-size: 1.3em;
+    border: 0px 0px 4px 0px solid #e3b7a6;
   }
   .icon {
     width: 80%;
@@ -188,10 +187,18 @@ p {
   .divicon {
     width: 50%;
   }
-  .divicon img {
-    margin-left: 100px;
-  }
+
   .regrouper {
-    margin: 0px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    font-size: 1.1em;
+  }
+  section article p {
+    padding-right: 0px;
+    font-size: 1em;
   }
 }
